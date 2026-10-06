@@ -169,6 +169,14 @@ dd{font-weight:600}
 .gift.opened .glow{box-shadow:0 0 120px 70px rgba(217,180,108,.55)}
 .gifthint{color:var(--gold);font-style:italic;min-height:1.6em}
 
+
+.cheers{display:flex;align-items:center;justify-content:center;gap:.6rem}
+.gl{font-size:2.6rem;display:inline-block;transform-origin:bottom center}
+.gl.r{transform:scaleX(-1)}
+.answered .gl.l{animation:clinkL 1.2s ease-in-out .5s 2}
+.answered .gl.r{animation:clinkR 1.2s ease-in-out .5s 2}
+@keyframes clinkL{40%,60%{transform:translateX(10px) rotate(18deg)}}
+@keyframes clinkR{40%,60%{transform:scaleX(-1) translateX(10px) rotate(18deg)}}
 @media (prefers-reduced-motion: reduce){
   *{transition-duration:.01s!important;animation:none!important}
 }
@@ -247,7 +255,7 @@ dd{font-weight:600}
     </section>
 
     <section class="done" aria-live="polite">
-      <h2>Yeahhh! 🎉</h2>
+      <h2 class="cheers"><span class="gl l" aria-hidden="true">🍷</span><span>Tuyệt vời,<br>uống nào!</span><span class="gl r" aria-hidden="true">🍷</span></h2>
       <p>Hẹn em 19h tối thứ Năm nhé.<br>Nhớ mặc thật xinh, anh qua đón em.</p>
       <div class="count" id="count">
         <div><b id="cd">0</b><span>ngày</span></div>
